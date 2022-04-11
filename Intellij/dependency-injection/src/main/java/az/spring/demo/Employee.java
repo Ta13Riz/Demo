@@ -1,10 +1,35 @@
 package az.spring.demo;
 
+import java.util.List;
+
 public class Employee {
     private String name;
     private String surname;
     private int age;
     private double salary;
+
+    private List<Device> device;
+
+
+    public Employee() {
+    }
+
+    public Employee(String name, String surname, int age, double salary) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public Employee(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public Employee(int age, double salary) {
+        this.age = age;
+        this.salary = salary;
+    }
 
     public String getName() {
         return name;
@@ -38,6 +63,15 @@ public class Employee {
         this.salary = salary;
     }
 
+
+    public List<Device> getDevice() {
+        return device;
+    }
+
+    public void setDevice(List<Device> device) {
+        this.device = device;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -45,6 +79,7 @@ public class Employee {
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
+                ", device=" + device +
                 '}';
     }
 }
