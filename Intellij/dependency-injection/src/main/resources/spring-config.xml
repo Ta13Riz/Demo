@@ -14,8 +14,8 @@
     <bean id="sms" class="az.spring.demo.Sms"/>
     <bean id="email" class="az.spring.demo.Email"/>
     <bean id="employee" class="az.spring.demo.Employee">
-        <!--        <constructor-arg value="Tabriz"/> eger constructor injection olsaydi bu formada deyerleri oturecekdik-->
-        <!--        <constructor-arg value="Tabriz" type="java.lang.String"/> &#45;&#45;eger bir nece constructor varsa ve biz hansisa constructora uygun parametrleri veririkse o zaman type elave edib tipini qeyd etmek lazimdir.-->
+<!--                <constructor-arg value="Tabriz"/> &lt;!&ndash;eger constructor injection olsaydi bu formada deyerleri oturecekdik-->
+<!--                <constructor-arg value="Tabriz" type="java.lang.String"/>  &lt;!&ndash;eger bir nece constructor varsa ve biz hansisa constructora uygun parametrleri veririkse o zaman type elave edib tipini qeyd etmek lazimdir.-->
         <!--        <property name="name" value="Tabriz"/>-->
         <!--        <property name="surname" value="Guliyev"/>-->
         <property name="age" value="28"/>
