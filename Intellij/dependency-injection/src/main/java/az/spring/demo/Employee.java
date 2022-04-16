@@ -1,6 +1,9 @@
 package az.spring.demo;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
 
 public class Employee {
     private String name;
@@ -8,7 +11,11 @@ public class Employee {
     private int age;
     private double salary;
 
-    private List<Device> device;
+    private Set<Device> device;
+    private Map<String, Device> deviceMap;
+
+    private Properties databaseProperties;
+
 
 
     public Employee() {
@@ -63,13 +70,28 @@ public class Employee {
         this.salary = salary;
     }
 
-
-    public List<Device> getDevice() {
+    public Set<Device> getDevice() {
         return device;
     }
 
-    public void setDevice(List<Device> device) {
+    public void setDevice(Set<Device> device) {
         this.device = device;
+    }
+
+    public Map<String, Device> getDeviceMap() {
+        return deviceMap;
+    }
+
+    public void setDeviceMap(Map<String, Device> deviceMap) {
+        this.deviceMap = deviceMap;
+    }
+
+    public Properties getDatabaseProperties() {
+        return databaseProperties;
+    }
+
+    public void setDatabaseProperties(Properties databaseProperties) {
+        this.databaseProperties = databaseProperties;
     }
 
     @Override
@@ -80,6 +102,8 @@ public class Employee {
                 ", age=" + age +
                 ", salary=" + salary +
                 ", device=" + device +
+                ", deviceMap=" + deviceMap +
+                ", databaseProperties=" + databaseProperties +
                 '}';
     }
 }

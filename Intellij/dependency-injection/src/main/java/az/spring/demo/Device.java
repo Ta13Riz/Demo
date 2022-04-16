@@ -4,6 +4,14 @@ public class Device {
     private String name;
     private String version;
 
+    public Device(String name, String version) {
+        this.name = name;
+        this.version = version;
+    }
+
+    public Device() {
+    }
+
     public String getName() {
         return name;
     }
