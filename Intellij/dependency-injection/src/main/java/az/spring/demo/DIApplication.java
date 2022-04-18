@@ -9,8 +9,8 @@ public class DIApplication {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
         Notification notification = context.getBean("notification", Notification.class);
-
         notification.alert();
+
     }
 
 }
