@@ -31,6 +31,10 @@
             <set> <!-- list yox set tipinde olarsa obyekt -->
                 <ref bean="deviceIOS"/>
                 <ref bean="deviceAndroid"/>
+                <bean class="az.spring.demo.Device"> <!--burda ise bir basa bean daxilde yaradilib oturulur, yaxsi olardiki kenarda yaradilib iceriye oturulsun. cunki propertini sisirdib daha oxunaqsiz hala getirir. Ona gore de kenarda yaradib referansin istifade elemek daha oxunaqli hala getirer-->
+                    <property name="name" value="Other"/>
+                    <property name="version" value="1.0.0"/>
+                </bean>
             </set>
         </property>
         <property name="deviceMap">
@@ -47,12 +51,11 @@
 
         <property name="databaseProperties">
             <props>
-            <prop key="url" >jdbc:mysql://localhost:3306/mydb</prop>
-            <prop key="username">root</prop>
-            <prop key="password">12345</prop>
+                <prop key="url">jdbc:mysql://localhost:3306/mydb</prop>
+                <prop key="username">root</prop>
+                <prop key="password">12345</prop>
             </props>
         </property>
-
 
 
     </bean>
