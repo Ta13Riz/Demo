@@ -1,14 +1,17 @@
 package az.spring.demo;
 
-public class  Notification {
+public class Notification {
     private Message message;
     private Employee employee;
 
-
-    //contructor injection
-    public Notification(Employee employee) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
+
+//    //contructor injection
+//    public Notification(Employee employee) {
+//        this.employee = employee;
+//    }
 
 
     //setter injection

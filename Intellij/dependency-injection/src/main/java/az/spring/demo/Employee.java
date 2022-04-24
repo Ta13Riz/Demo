@@ -17,7 +17,6 @@ public class Employee {
     private Properties databaseProperties;
 
 
-
     public Employee() {
     }
 

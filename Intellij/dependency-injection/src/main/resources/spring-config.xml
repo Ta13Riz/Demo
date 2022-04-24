@@ -3,22 +3,24 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="notification1" class="az.spring.demo.Notification">
-        <!--   <property name="message" ref="email"/> Set injection zamani istifade olunur-->
+<!--    <bean id="notification1" class="az.spring.demo.Notification" name="no">-->
+<!--        &lt;!&ndash;   <property name="message" ref="email"/> Set injection zamani istifade olunur&ndash;&gt;-->
+<!--        <constructor-arg ref="employee"/>-->
+<!--        <property name="message" ref="sms"/>-->
+<!--    </bean>-->
 
-        <constructor-arg ref="employee"/>
-        <property name="message" ref="sms"/>
+<!--    <alias name="notification1" alias="notification-sms"/>-->
+<!--    <alias name="notification2" alias="notification-email"/>-->
 
-    </bean>
-    <bean id="notification2" class="az.spring.demo.Notification">
-        <!--   <property name="message" ref="email"/> Set injection zamani istifade olunur-->
+<!--    <bean id="notification2" class="az.spring.demo.Notification">-->
+<!--        &lt;!&ndash;   <property name="message" ref="email"/> Set injection zamani istifade olunur&ndash;&gt;-->
+<!--        <constructor-arg ref="employee"/>-->
+<!--        <property name="message" ref="email"/>-->
+<!--    </bean>-->
 
-        <constructor-arg ref="employee"/>
-        <property name="message" ref="email"/>
+    <bean id="notification" class="az.spring.demo.Notification" autowire="byType"/>
 
-    </bean>
-
-    <bean id="sms" class="az.spring.demo.Sms"/>
+<!--    <bean id="sms" class="az.spring.demo.Sms"/>-->
     <bean id="email" class="az.spring.demo.Email"/>
     <bean id="employee" class="az.spring.demo.Employee">
         <!--                <constructor-arg value="Tabriz"/> &lt;!&ndash;eger constructor injection olsaydi bu formada deyerleri oturecekdik-->
