@@ -1,7 +1,14 @@
 package az.spring.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Notification {
+    @Autowired
+   @Qualifier("sms")
     private Message message;
+
+    @Autowired
     private Employee employee;
 
     public Notification() {
@@ -11,11 +18,6 @@ public class Notification {
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
-
-//    //contructor injection
-//    public Notification(Employee employee) {
-//        this.employee = employee;
-//    }
 
 
     //setter injection

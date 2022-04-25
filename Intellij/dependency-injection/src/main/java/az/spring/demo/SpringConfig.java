@@ -27,20 +27,10 @@ public class SpringConfig {
     }
 
 
-    @Bean("email-notification")
-    @Scope("prototype")
-    public Notification getNotification(@Qualifier("email") Message message, Employee employee) {
+    @Bean(initMethod = "myInit", destroyMethod = "myDestroy", name = "notification")
+    public Notification getNotification() {
         Notification notification = new Notification();
-        notification.setMessage(message);
-        notification.setEmployee(employee);
-        return notification;
-    }
-    @Bean(initMethod = "myInit", destroyMethod = "myDestroy",name = "notification")
-    @Scope("singleton")
-    public Notification getNotification2(@Qualifier("sms") Message message, Employee employee) {
-        Notification notification = new Notification();
-        notification.setMessage(message);
-        notification.setEmployee(employee);
+
         return notification;
     }
 
