@@ -4,6 +4,10 @@ public class Notification {
     private Message message;
     private Employee employee;
 
+    public Notification() {
+        System.out.println("Notification constructor worked");
+    }
+
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
@@ -22,7 +26,16 @@ public class Notification {
     public void alert() {
         System.out.println("Notification...");
         System.out.println(employee);
-
         message.send();
     }
+
+    public void myInit() {
+        System.out.println("My init method worked.");
+    }
+
+    public void myDestroy() {
+        System.out.println("destroy method worked");
+    }
+
+
 }
