@@ -1,10 +1,13 @@
 package az.spring.demo;
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+@Component
 public class Employee {
     private String name;
     private String surname;

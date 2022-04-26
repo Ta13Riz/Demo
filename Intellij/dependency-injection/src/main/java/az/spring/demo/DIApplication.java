@@ -9,9 +9,9 @@ public class DIApplication {
 
     public static void main(String[] args) {
 
-       AbstractApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+//       AbstractApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
 //        ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-//        AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
         context.registerShutdownHook();
 
         Notification notification = context.getBean("notification", Notification.class);
