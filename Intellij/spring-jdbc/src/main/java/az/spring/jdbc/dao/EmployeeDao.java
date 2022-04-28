@@ -14,7 +14,7 @@ public interface EmployeeDao {
 
     Employee getEmployeeById(int id);
 
-    List<Employee> getEmployees();
+    List<Employee> getAllEmployees();
 
     long count();
 
